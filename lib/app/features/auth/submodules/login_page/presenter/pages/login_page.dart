@@ -12,6 +12,13 @@ class LogiinPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        leading: Icon(
+          Icons.arrow_back_ios,
+        ),
+        backgroundColor: ThemeColors.backgroudColorLogin,
+        elevation: 0,
+      ),
       body: Container(
         height: size.height,
         decoration: const BoxDecoration(
@@ -77,12 +84,15 @@ class LogiinPage extends StatelessWidget {
                 ),
                 title: 'SIGN IN WITH PHONE NUMBER',
               ),
+              SizedBox(
+                height: size.height * 0.02,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
                   Text(
                     'Trouble Signing In?',
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                 ],
               )
